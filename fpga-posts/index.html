@@ -6,7 +6,7 @@
   <meta charset="utf-8">
   <!-- SEO相关 -->
   
-  <link rel="canonical" href="http://example.com/2024/06/26/hello-world/"/>
+  <link rel="canonical" href="http://example.com/fpga-posts/"/>
   <!-- 渲染优化 -->
     <meta http-equiv='x-dns-prefetch-control' content='on' />
       <link rel='dns-prefetch' href='https://unpkg.com'>
@@ -33,19 +33,19 @@
 
   <!-- feed -->
   <!-- 页面元数据 -->
-  <title>first blog - GXM的梦工厂</title>
+  <title>FPGA学习日记(一)--UART_RS232 - GXM的梦工厂</title>
   <meta name="keywords" content="null">
   <meta desc name="description" content="nihao - GUOXIANGMING - GXM的梦工厂">
   
-<meta property="og:type" content="article">
-<meta property="og:title" content="first blog">
-<meta property="og:url" content="http://example.com/2024/06/26/hello-world/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="FPGA学习日记(一)--UART_RS232">
+<meta property="og:url" content="http://example.com/fpga-posts/index.html">
 <meta property="og:site_name" content="GXM的梦工厂">
-<meta property="og:description" content="Welcome to GXM’s blog! This is my first post.  Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;  More info: Writing Run server1$ hexo server  More info: Server Generate static files1$ h">
+<meta property="og:description" content="基于FPGA平台实现的UART_RS232通信实验 声明:本文仅作为自己的学习记录,分享自己的小小心得,所引用的资料大多都能在网上搜索到,希望与志同道合的伙伴一起学习!可以在文章的下方评论交流!愿意接收批评指正😄!  PA0.完成本次实验所需要的能力 遇见陌生or不熟悉的名词能够立刻去搜索引擎or知识平台去搜索(包括但不限于B站&#x2F;CSDN) 对于FPGA&#x2F;IC感兴趣😍 一个爱思考的大脑🧠还有">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
-<meta property="article:published_time" content="2024-06-26T15:21:11.808Z">
-<meta property="article:modified_time" content="2024-07-29T13:57:15.776Z">
+<meta property="article:published_time" content="2024-09-11T05:07:04.000Z">
+<meta property="article:modified_time" content="2024-09-11T05:11:35.280Z">
 <meta property="article:author" content="GUOXIANGMING">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png">
@@ -1759,7 +1759,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     debug: "env",
     cdn: {"js":{"app":"/js/app.js","parallax":"/js/plugins/parallax.js","rightMenu":"/js/plugins/rightMenu.js","rightMenus":"/js/plugins/rightMenus.js","sites":"/js/plugins/tags/sites.js","friends":"/js/plugins/tags/friends.js","contributors":"/js/plugins/tags/contributors.js","search":"/js/search/hexo.js"},"css":{"style":"/css/style.css"}},
     default: {"avatar":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/avatar/round/3442075.svg","link":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/link/8f277b4ee0ecd.svg","cover":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/cover/76b86c0226ffd.svg","image":"https://unpkg.com/volantis-static@0.0.1654736714924/media/placeholder/image/2659360.svg"},
-    lastupdate: new Date(1724748379568),
+    lastupdate: new Date(1726044800580),
     sidebar: {
       for_page: ["blogger","category","tagcloud","donate"],
       for_post: ["toc"],
@@ -2281,13 +2281,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://www.zhihu.com/people/9-78-52-34/posts" title="知乎(纯吐槽)"
+                target="_blank" rel="noopener" href="https://www.zhihu.com/people/9-78-52-34/posts" title="知乎"
                   
                   
                   
                     active-action="action-https:wwwzhihucompeople9-78-52-34posts"
                   >
-                  <i class='fa-brands fa-algolia fa-fw'></i>知乎(纯吐槽)
+                  <i class='fa-brands fa-algolia fa-fw'></i>知乎
                 </a>
                 
               </li>
@@ -2317,11 +2317,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="FPGA/IC(小白求轻喷)"
+                href="/fpga-posts/" title="FPGA/IC(小白求轻喷)"
                   
                   
                   
-                    active-action="action-tags"
+                    active-action="action-fpga-posts"
                   >
                   <i class='fas fa-torah fa-fw'></i>FPGA/IC(小白求轻喷)
                 </a>
@@ -2340,11 +2340,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="STM32(小白求轻喷)"
+                href="/stm32-posts/" title="STM32(小白求轻喷)"
                   
                   
                   
-                    active-action="action-categories"
+                    active-action="action-stm32-posts"
                   >
                   <i class='fa-solid fa-book-atlas fa-fw'></i>STM32(小白求轻喷)
                 </a>
@@ -2609,13 +2609,13 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                target="_blank" rel="noopener" href="https://www.zhihu.com/people/9-78-52-34/posts" title="知乎(纯吐槽)"
+                target="_blank" rel="noopener" href="https://www.zhihu.com/people/9-78-52-34/posts" title="知乎"
                   
                   
                   
                     active-action="action-https:wwwzhihucompeople9-78-52-34posts"
                   >
-                  <i class='fa-brands fa-algolia fa-fw'></i>知乎(纯吐槽)
+                  <i class='fa-brands fa-algolia fa-fw'></i>知乎
                 </a>
                 
               </li>
@@ -2645,11 +2645,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/tags/" title="FPGA/IC(小白求轻喷)"
+                href="/fpga-posts/" title="FPGA/IC(小白求轻喷)"
                   
                   
                   
-                    active-action="action-tags"
+                    active-action="action-fpga-posts"
                   >
                   <i class='fas fa-torah fa-fw'></i>FPGA/IC(小白求轻喷)
                 </a>
@@ -2668,11 +2668,11 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
             
               <li>
                 <a class="menuitem flat-box faa-parent animated-hover"
-                href="/categories/" title="STM32(小白求轻喷)"
+                href="/stm32-posts/" title="STM32(小白求轻喷)"
                   
                   
                   
-                    active-action="action-categories"
+                    active-action="action-stm32-posts"
                   >
                   <i class='fa-solid fa-book-atlas fa-fw'></i>STM32(小白求轻喷)
                 </a>
@@ -2872,7 +2872,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
     
       <!-- see: /layout/_partial/scripts/_ctrl/coverCtrl.ejs -->
-      <div id="none" class='cover-wrapper post blank' style="display: none;">
+      <div id="none" class='cover-wrapper page blank' style="display: none;">
         
   <div id="parallax-window"></div>
 
@@ -2887,8 +2887,8 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
         <div class="body-wrapper">
           
 <div id="l_main" class=''>
-  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-post" id="post" itemscope itemprop="blogPost">
-  <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/26/hello-world/">
+  <article itemscope itemtype="http://schema.org/Article" class="article post white-box reveal md shadow floatable blur article-type-page" id="page" itemscope itemprop="blogPost">
+  <link itemprop="mainEntityOfPage" href="http://example.com/fpga-posts/index.html">
   <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
     <meta itemprop="name" content="GXM的梦工厂">
   </span>
@@ -2909,7 +2909,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     
     
       <h1 class="title" itemprop="name headline">
-        first blog
+        FPGA学习日记(一)--UART_RS232
       </h1>
       <div class='new-meta-box'>
         
@@ -2930,10 +2930,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
           
         
           
-            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-06-26T23:21:11+08:00">
+            <div class="new-meta-item date" itemprop="dateCreated datePublished" datetime="2024-09-11T13:07:04+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-calendar-alt fa-fw" aria-hidden="true"></i>
-    <p>发布于：2024年6月26日</p>
+    <p>发布于：2024年9月11日</p>
   </a>
 </div>
 
@@ -2956,34 +2956,188 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <div id="layoutHelper-page-plugins"></div>
   <div id="post-body" itemprop="articleBody">
-    <p>Welcome to GXM’s blog! This is my first post. </p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <h1 id="基于FPGA平台实现的UART-RS232通信实验"><a href="#基于FPGA平台实现的UART-RS232通信实验" class="headerlink" title="基于FPGA平台实现的UART_RS232通信实验"></a>基于FPGA平台实现的UART_RS232通信实验</h1><blockquote>
+<p><em><strong>声明</strong></em>:本文仅作为自己的学习记录,分享自己的小小心得,所引用的资料大多都能在网上搜索到,希望与志同道合的伙伴一起学习!可以在文章的下方评论交流!愿意接收批评指正😄!</p>
+</blockquote>
+<h2 id="PA0-完成本次实验所需要的能力"><a href="#PA0-完成本次实验所需要的能力" class="headerlink" title="PA0.完成本次实验所需要的能力"></a>PA0.完成本次实验所需要的能力</h2><ol>
+<li>遇见陌生or不熟悉的名词能够立刻去搜索引擎or知识平台去搜索(包括但不限于<code>B站/CSDN</code>)</li>
+<li>对于<code>FPGA/IC</code>感兴趣😍</li>
+<li>一个爱思考的大脑🧠还有勤劳的双手👐<blockquote>
+<p>如果全部都有,恭喜!已经成功50%了!<br><code>PS</code>:还有950% 💢</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="PA1-实验前碎碎念"><a href="#PA1-实验前碎碎念" class="headerlink" title="PA1.实验前碎碎念"></a>PA1.实验前碎碎念</h2><p>首先,什么是UART?什么是RS232?为什么要学习它? 它与其他的串口通信又有什么区别?我们学会它又能做些什么?这是在下定决心去学习之前需要去考虑的.那么就带着疑惑往下翻吧😃</p>
+<h2 id="PA2-背景引入-废话很多-忍一下👉👈"><a href="#PA2-背景引入-废话很多-忍一下👉👈" class="headerlink" title="PA2.背景引入(废话很多,忍一下👉👈)"></a>PA2.背景引入(废话很多,忍一下👉👈)</h2><p>众所周知,人与人之间的交流与沟通靠的是语言(汉语,英语…),那么计算机之间的交流与沟通,简称通信,方式自然多种多样,下面是一些常用的通信方式(<code>了解即可</code>)</p>
+<ol>
+<li><strong>串行通信</strong><br>特点：数据一位一位地传输(串行数据)<br>协议：UART、I2C、SPI</li>
+<li><strong>并行通信</strong><br>特点：数据各个位同时传输(并行数据)<br>应用：计算机内部总线、打印机接口</li>
+<li><strong>网络通信</strong><ul>
+<li>有线以太网：基于包交换的网络通信，支持高速数据传输</li>
+<li>Wi-Fi：基于IEEE 802.11标准的无线局域网通信</li>
+<li>蜂窝网络：如4G、5G，用于移动设备的广域网通信</li>
+</ul>
+</li>
+<li><strong>无线通信</strong><ul>
+<li>蓝牙：短距离无线通信技术，适用于设备间的数据传输</li>
+<li>Zigbee：低功耗、低数据速率的无线通信技术，适用于物联网（IoT）设备</li>
+<li>红外通信：使用红外线传输数据，适用于短距离通信</li>
+</ul>
+</li>
+<li><strong>总线通信</strong><ul>
+<li>PCIe：高速串行计算机扩展总线标准</li>
+<li>USB（通用串行总线）：支持高速通信，适用于计算机与外部设备之间的通信</li>
+</ul>
+</li>
+</ol>
+<p>咳咳,废话了这么多,今天重点要学习的只有一个:<code>串行通信</code>!</p>
+<h2 id="PA3-串行通信的分类"><a href="#PA3-串行通信的分类" class="headerlink" title="PA3.串行通信的分类"></a>PA3.串行通信的分类</h2><ol>
+<li><strong>按时钟分类</strong></li>
+</ol>
+<ul>
+<li>同步通信:<br>也就是共享时钟信号,发送端和接收端使用同一个时钟信号进行数据同步。<br>常用的通信协议有:SPI（串行外设接口）、I2C（集成电路间通信）(<code>也很重要,以后再说</code>⭐)</li>
+<li>异步通信(<code>暂时的主角</code>😇)):<br>不带时钟同步信号进行传输,通过起始位和停止位进行数据同步<br>常用的通信协议有:UART（通用异步收发传输器）<blockquote>
+<p>注:<code>UART</code>（通用异步收发传输器）与<code>USART</code>（通用同步异步收发传输器）:UART与USART本质上都是指单片机实际存在一个端口模块，而USART则可以根据需要配置成同步模式（SPI，I2C），也可以将其配置为异步模式，后者就是UART。所以说UART姑且可以称之为一个与SPI，I2C对等的“协议”，而USART则不是一个协议，而是更应该理解为一个实体端口模块。</p>
+</blockquote>
+</li>
+</ul>
+<ol start="2">
+<li><strong>按方向分类</strong><blockquote>
+<p>A,B为通信的双方</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li><code>单双工通信</code>:数据只能在一个方向传输,发送端和接收端固定(A只能发送数据,B只能接收数据。eg:广播电台和收音机)</li>
+<li><code>半双工通信</code>:数据可以在两个方向上传输，但不能同时进行,发送和接收是交替进行的(A接收B发送或者B接收A发送,只是不能同步。eg:对讲机)</li>
+<li><code>全双工通信</code>:数据可以在两个方向同时传输，发送和接收可以同时进行(A接收并发送,B接收并发送,可以同步进行。eg:电话)</li>
+</ul>
+<h2 id="PA4-UART–RS232的介绍"><a href="#PA4-UART–RS232的介绍" class="headerlink" title="PA4.UART–RS232的介绍"></a>PA4.UART–RS232的介绍</h2><p><code>UART</code>包括多种接口标准规范和总线标准规范，RS232为其一，还有RS499、RS423、RS422、RS485等。(至于为什么讲RS232,因为简单,其他的我不会😇)<br>先看下方视频动画(将RS232讲的很清楚),待会强调几个重点<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1PD4y147ts?t=14.3">https://www.bilibili.com/video/BV1PD4y147ts?t=14.3</a></p>
+<ol>
+<li><p><strong>帧结构</strong>：包含1bit起始位,8bit有效数据和1bit停止位。空闲状态是高电平1，起始位低电平0，停止位高电平1。低位数据先发，后发高位。</p>
+<p>
+<img src="https://s21.ax1x.com/2024/07/29/pkqXkm6.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/29/pkqXkm6.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width=500" height="170" align="center">
+1帧传输1Byte(字节)数据:假设我要传输字符“1”，对应的`ASCII码`值是0x31，即“0011 0001” ，低位先发，那么我的这帧数据波形为`0 1000 1100 1`
+ASCII码表(感兴趣自行查阅):https://www.asciim.cn/
+</p>
+</li>
+<li><p><strong>波特率</strong>:假设波特率为9600Bps，传输一个码元（一个码元在这里代表一个二进制数，就是1bit数据）需要1&#x2F;9600秒。假设系统时钟50MHz（周期为20ns），那么传输1bit数据所需的时间为 (1&#x2F;9600)÷(20×$10^{-9}$) &#x3D; 5208.33 ≈ 5208 个时钟周期。</p>
+</li>
+<li><p><strong>TTL</strong>:是一种数字电路的逻辑电平标准，许多微控制器的 I&#x2F;O 引脚都采用 TTL 电平标准,并且 UART、SPI、I2C 等接口也常采用 TTL 电平标准:</p>
+<ul>
+<li>逻辑高电平（High）：<br>通常定义为 2.0V 到 5.0V 之间。<br>在实际应用中，通常认为 <code>2.4V 及以上为高电平</code>。</li>
+<li>逻辑低电平（Low）：<br>通常定义为 0V 到 0.8V 之间。<br>在实际应用中，通常认为 <code>0.4V 及以下为低电平</code>。</li>
+</ul>
+<p> 于是,TTL电平输入低电平的噪声容限就只有(0.8-0)&#x2F;2&#x3D;0.4V，高电平的噪声容限为(5-2.4)&#x2F;2&#x3D;1.3V,所以它的抗干扰能力很弱,这就导致TTL电平的串口通讯距离很短,一般用于一块电路板的两块芯片之间</p>
+</li>
+<li><p><strong>RS232</strong>:是一种串行通信标准,其对应的电平标准为:</p>
+<ul>
+<li>逻辑高电平：-3V 到 -15V（通常为 -12V）。</li>
+<li>逻辑低电平：+3V 到 +15V（通常为 +12V）。<blockquote>
+<p>电压范围变大了,自然抗干扰能力就变强了,所以RS232电平标准的串口通讯距离可以达到15米左右,适用于远距离通讯</p>
+</blockquote>
+</li>
+</ul>
+<p> 是的,你没有看错,RS232的逻辑高电平是负电压,逻辑低电平是正电压,之所以设计成负逻辑主要也是为了提高抗干扰能力</p>
+</li>
+</ol>
+<p>
+<img src="https://s21.ax1x.com/2024/07/29/pkqXH4e.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/29/pkqXH4e.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width=450" height="150" align = "center">
+本质上,RS232只是在TTL电平的基础上增加了一个电平转换芯片(MA3232芯片),将TTL电平转换为RS232电平,这样就可以实现远距离通讯了,如下图所示
+</p>
+<p>
+<img src="https://s21.ax1x.com/2024/07/29/pkqXq9H.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/29/pkqXq9H.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width=700" height="150" align = "center">
+</p>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p><strong>但是!!!<code>敲重点</code>💢!在此次实验中,我们<code>不需要考虑RS232的电平转换</code>,因为FPGA开发板已搭载了 USB 转TTL电平进而让电脑通过USB总线与FPGA的串口uart进行通信的芯片 CH340,所以只需要设计并实现基于RS232也就是以UART协议收发数据的逻辑电路即可</strong><br><code>整体流程:电脑通过USB-typeA外接数据线,连接到fpga开发板的USB-typeC接口,然后通过CH340芯片将电脑的USB信号转换为TTL电平信号,再通过TTL电平信号与FPGA的串口uart进行通信,这样就实现了电脑与FPGA的回环通信</code></p>
+<h2 id="PA5-实验目的"><a href="#PA5-实验目的" class="headerlink" title="PA5.实验目的"></a>PA5.实验目的</h2><p>设计并实现基于RS232也就是以UART协议收发数据的逻辑电路控制器</p>
+<blockquote>
+<p>在我们往FPGA里面写RTL代码之前,我们用串口调试助手从电脑端向FPGA的UART发送数据,FPGA是没有反应的,因为我们还没有设计好FPGA的UART接收模块,就算有数据的高低电平变化它也无动于衷,所以我们需要告诉FPGA什么时候接收信号,发送信号,取几位信号…等等一系列问题,都设计好之后,我们再用串口调试助手从电脑端向FPGA发送数据时,数据便可再次从FPGA端返回到电脑端再通过串口调试助手显示,这样就实现了电脑与FPGA的回环通信💑</p>
+</blockquote>
+<h2 id="PA6-实验整体设计思路"><a href="#PA6-实验整体设计思路" class="headerlink" title="PA6.实验整体设计思路"></a>PA6.实验整体设计思路</h2><p>UART 通信只有两根信号线，一根是发送数据端口线叫 tx（Transmitter），一根是接收数据端口线叫 rx（Receiver），如下图所示。对于 PC 来说它的 tx 要和对于 FPGA 来说的 rx 连接，同样 PC 的 rx 要和 FPGA 的 tx 连接。UART 可以实现全双工(可以同时进行发送数据和接收数据)。如下图所示:</p>
+<p>
+<img src="https://s21.ax1x.com/2024/07/29/pkLGkRO.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/29/pkLGkRO.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width=600" height="150" align = "center">
+</p>
+实验模块的整体框图如下(UART控制器便是下图的rs232模块):
+<p>
+<img src="https://s21.ax1x.com/2024/07/29/pkLGBWT.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/29/pkLGBWT.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width=600" height="190" align = "center">
+</p>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p><strong>下面将基于上图详细介绍每个信号的作用以及设计思路</strong>:<code>认真听,你一定能学会😎</code></p>
+<ol>
+<li><code>sys_clk</code>:系统时钟信号,频率为50MHz,一个周期为20ns,用于同步控制uart_rx和uart_tx的工作<blockquote>
+<p>这时候细心的同学可能会问:不是说好的uart是异步通信吗?为什么还要用到时钟信号?<br>这里的时钟信号是用来同时控制uart_rx和uart_tx的工作的,而不是用来同步数据的,所谓UART 和 SPI、 IIC 不同的异步通信是指异步通信中的接收方并不知道数据什么时候会到达，双方收发端有各自的时钟。注意在数据传输过程中是不需要时钟的，发送方发送的时间间隔可以不均匀，接受方是在数据的起始位和停止位的帮助下实现信息同步的。而 SPI、 IIC 是同步通信接口，同步通信中双方使用频率一致的时钟，在数据传输过程中时钟伴随着数据一起传输，发送方和接收方使用的时钟都是由主机提供的</p>
+</blockquote>
+</li>
+<li><code>sys_rst_n</code>:复位信号,低电平有效,用于初始化</li>
+<li><code>rx</code>:接收数据端口,用于接收电脑端发送的<code>串行数据</code></li>
+<li><code>po_data[7:0]</code>:<code>rx</code>端口接收的串行数据经过uart_rx模块解析出有用(上文说过,uart的一帧结构为10bit,去除起始位1bit和停止位1bit)的数据,并将其转化为8bit的并行数据,存储在<code>po_data[7:0]</code>中<blockquote>
+<p>这时候细心的同学可能又会问:好端端的为什么要将串行数据转化为并行数据呢?串行数据不好吗?<br>首先,我们处理数据的环境是FPGA,在 FPGA 中，处理并行数据的电路设计通常比处理串行数据的电路设计更简单。并行数据可以直接输入到多个寄存器或逻辑单元中，而串行数据需要通过移位寄存器等复杂电路进行处理。<br>其次,处理并行数据时，每个时钟周期可以处理多个数据位，因此可以降低时钟频率要求，减少功耗和电磁干扰。并行数据传输还可以减少数据传输过程中的延迟和抖动，提高系统的稳定性和可靠性。<br>最后,并行数据还方便后续处理数据,许多后续处理模块（如数据存储、数据分析等）更适合处理并行数据。将串行数据转化为并行数据可以简化后续处理的实现。</p>
+</blockquote>
+</li>
+<li><code>po_flag</code>:数据有效标志信号,uart_rx模块解析出有用的数据后,将<code>po_flag</code>置1,表示有数据可以读取,进行下一步处理</li>
+<li><code>pi_flag</code>与<code>pi_data[7:0]</code>:<code>po_data[7:0]</code> 和数据有效标志信号 <code>po_flag</code> 通过 FPGA 的内部连线直接传输给 uart_tx 模块的 8bit 数据输入端 pi_data[7:0] 和数据有效标志信号输入端 pi_flag</li>
+<li><code>tx</code>:发送数据端口,uart_tx模块将接收的并行数据pi_data[7:0]转化为串行数据,发送回电脑端的串口调试助手打印显示,发送什么,最后就显示什么(如果最后发现失败了,重新检查每个环节)</li>
+</ol>
+<h2 id="PA7-uart-rx模块设计思路"><a href="#PA7-uart-rx模块设计思路" class="headerlink" title="PA7.uart_rx模块设计思路"></a>PA7.uart_rx模块设计思路</h2><ol>
+<li>根据UART_RS232协议,绘制uart_rx模块波形图,详细解释每个信号的作用,如下图所示:<p>
+<img src="https://s21.ax1x.com/2024/07/29/pkLaiFA.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/29/pkLaiFA.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width=1200" height="350" align = "center">
+</p></li>
+</ol>
+<blockquote>
+<ul>
+<li><strong>input</strong>为输入端口,<strong>reg_vari</strong>为寄存器变量便于实现功能,<strong>output</strong>为输出端口</li>
+<li>由于uart是异步通信,FPGA端的时钟sys_clk与rx端接收的串行数据(同步于电脑时钟) 是异步的,所以来自rx的串行数据不能直接被使用,需要通过rx_reg1延后一个周期进而同步到sys_clk也就是FPGA的系统时钟,但是当一个异步信号被同步到时钟域时，信号的变化可能会在时钟的建立时间或保持时间内发生，导致触发器无法稳定地采样信号进而输出<code>亚稳态</code>(触发器的输出在一段时间内保持不确定状态)。所以我们需要通过rx_reg2和rx_reg3再延后两个周期,这样就可以保证信号的稳定性,最终的rx_reg3的输出就是可以拿来使用的串行数据</li>
+<li>start_flag为数据开始接收标志位,当rx_reg3为高电平,rx_reg2为低电平时,将start_flag置1,表示开始接收数据,其余时刻置0</li>
+<li>word_en为接收数据的使能信号,当start_flag为1时,word_en置1,在接收数据的过程中始终置1,一帧数据接收完成之后,word_en置0</li>
+<li>前文中在讲波特率的时候提到,dang波特率为9600Bps,传输1bit数据需要5208个时钟周期,所以我们需要一个计数器baud_cnt[15:0],当start_flag为1时,baud_cnt从0开始计数,当counter计数到5207时,将baud_cnt清零重新计数</li>
+<li>bit_flag为波特率计数器标志,当baud_cnt计数到2603(也就是差不多最大值的一半,更稳定,当然也可以是1~5207的其他值),将bit_flag置1,表示接收到了一位数据</li>
+<li>bit_flag置1后,还需要bit_cnt[3:0]计数,当bit_cnt计数到8时,将bit_cnt清零,bit_flag置0,表示接收到了一帧数据</li>
+<li>rx_data[7:0]则是通过{rx_reg3,ra_data[7:1]}的拼接运算得到,可以动手自己试试,经过8次拼接与运算后,将串行数据转化为并行数据,存储在rx_data[7:0]中</li>
+<li>在串行数据转化为并行数据后将rx_flag置1,表示有数据可以读取,进行下一步处理</li>
+<li>最后在rx_flag置1后,将rx_data[7:0]输出为po_data[7:0],同时将po_flag置1,便于同步输出到下一个模块</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>根据上述设计思路,编写RTL代码,如下:<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> uart_rx</span><br><span class="line">#(</span><br><span class="line">    <span class="keyword">parameter</span> UARTBPS = <span class="number">&#x27;d9600</span>,</span><br><span class="line">              CLK_FREQ = <span class="number">&#x27;d50_000_000</span></span><br><span class="line">)</span><br><span class="line">(</span><br><span class="line"><span class="keyword">input</span> <span class="keyword">wire</span> sys_clk,</span><br><span class="line"><span class="keyword">input</span> <span class="keyword">wire</span> sys_rst_n,</span><br><span class="line"><span class="keyword">input</span> <span class="keyword">wire</span> rx,</span><br><span class="line"><span class="keyword">output</span> <span class="keyword">reg</span> [<span class="number">7</span>:<span class="number">0</span>] po_data,</span><br><span class="line"><span class="keyword">output</span> <span class="keyword">reg</span> po_flag</span><br><span class="line">);</span><br><span class="line"><span class="keyword">reg</span> rx_reg1;</span><br><span class="line"><span class="keyword">reg</span> rx_reg2;</span><br><span class="line"><span class="keyword">reg</span> rx_reg3;</span><br><span class="line"><span class="keyword">reg</span> start_flag;<span class="comment">//开始数据接收的信号标志</span></span><br><span class="line"><span class="keyword">reg</span> word_en;</span><br><span class="line"><span class="keyword">reg</span> [<span class="number">15</span>:<span class="number">0</span>] baud_cnt;</span><br><span class="line"><span class="keyword">reg</span> bit_flag;</span><br><span class="line"><span class="keyword">reg</span> [<span class="number">3</span>:<span class="number">0</span>] bit_cnt;</span><br><span class="line"><span class="keyword">reg</span> [<span class="number">7</span>:<span class="number">0</span>] rx_data;</span><br><span class="line"><span class="keyword">reg</span> rx_flag;</span><br><span class="line"></span><br><span class="line"><span class="keyword">parameter</span> BAUD_CNT_MAX = CLK_FREQ / UARTBPS;</span><br><span class="line"></span><br><span class="line"><span class="comment">//将输入信号rx同步到sys_clk时钟域</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    rx_reg1 &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    rx_reg1 &lt;= rx;</span><br><span class="line"><span class="keyword">end</span>    </span><br><span class="line"><span class="comment">//通过两级寄存器rx_reg2和rx_reg3消除跨时钟域时出现的亚稳态</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    rx_reg2 &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    rx_reg2 &lt;= rx_reg1;</span><br><span class="line"><span class="keyword">end</span>    </span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    rx_reg3 &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    rx_reg3 &lt;= rx_reg2;</span><br><span class="line"><span class="keyword">end</span>    </span><br><span class="line"><span class="comment">//编写数据接收的信号标志start_flag</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    start_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((rx_reg2 == <span class="number">1&#x27;b0</span>)&amp;&amp;(rx_reg3 == <span class="number">1&#x27;b1</span>)&amp;&amp;(word_en == <span class="number">1&#x27;b0</span>))</span><br><span class="line">    start_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    start_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">//编写提取数据使能信号word_en</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    word_en &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(start_flag == <span class="number">1&#x27;b1</span>)</span><br><span class="line">    word_en &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((bit_cnt == <span class="number">4&#x27;d8</span>)&amp;&amp;(bit_flag == <span class="number">1&#x27;b1</span>))</span><br><span class="line">    word_en &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    word_en &lt;= word_en;</span><br><span class="line"><span class="keyword">end</span>    </span><br><span class="line"><span class="comment">//编写波特率单位计数器baud_cnt</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    baud_cnt &lt;= <span class="number">16&#x27;d0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((baud_cnt == BAUD_CNT_MAX - <span class="number">1&#x27;b1</span>)||(word_en ==<span class="number">1&#x27;b0</span>))</span><br><span class="line">    baud_cnt &lt;= <span class="number">16&#x27;d0</span>;</span><br><span class="line">    <span class="keyword">else</span> </span><br><span class="line">    baud_cnt &lt;= baud_cnt + <span class="number">16&#x27;d1</span>;</span><br><span class="line"><span class="keyword">end</span>    </span><br><span class="line"><span class="comment">//编写波特率计数器的标志信号bit_flag</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    bit_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(baud_cnt == BAUD_CNT_MAX/<span class="number">2</span>-<span class="number">1</span>)<span class="comment">//当计数到中间时最稳定</span></span><br><span class="line">    bit_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    bit_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">//编写波特率的个数bit_cnt</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    bit_cnt &lt;= <span class="number">4&#x27;d0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((bit_flag == <span class="number">1&#x27;b1</span>)&amp;&amp;(bit_cnt == <span class="number">4&#x27;d8</span>))</span><br><span class="line">    bit_cnt &lt;= <span class="number">4&#x27;d0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(bit_flag == <span class="number">1&#x27;b1</span>)</span><br><span class="line">    bit_cnt &lt;= bit_cnt + <span class="number">4&#x27;d1</span>; </span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    bit_cnt &lt;= bit_cnt;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">//将串行数据rx用拼接法转换成并行数据rx_data[7:0]</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    rx_data &lt;= <span class="number">8&#x27;d0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((bit_cnt &gt;= <span class="number">4&#x27;d1</span>)&amp;&amp;(bit_cnt &lt;=<span class="number">4&#x27;d8</span>)&amp;&amp;(bit_flag==<span class="number">1&#x27;b1</span>))</span><br><span class="line">    rx_data &lt;= &#123;rx_reg3,rx_data[<span class="number">7</span>:<span class="number">1</span>]&#125;;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">//编写接收数据完成信号rx_flag</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    rx_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((bit_flag == <span class="number">1&#x27;b1</span>)&amp;&amp;(bit_cnt == <span class="number">4&#x27;d8</span>))</span><br><span class="line">    rx_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    rx_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">//编写输出po_data</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    po_data &lt;= <span class="number">8&#x27;d0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(rx_flag == <span class="number">1&#x27;b1</span>)</span><br><span class="line">    po_data &lt;= rx_data;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    po_data &lt;= po_data;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">//编写和po_data同步的po_flag信号</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    po_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(rx_flag == <span class="number">1&#x27;b1</span>)</span><br><span class="line">    po_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    po_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure></li>
+<li>编写testbench测试文件<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">`<span class="keyword">timescale</span> 1ns/1ps</span></span><br><span class="line"><span class="keyword">module</span> uart_rx_tb();</span><br><span class="line"><span class="keyword">reg</span> sys_clk;</span><br><span class="line"><span class="keyword">reg</span> sys_rst_n;</span><br><span class="line"><span class="keyword">reg</span> rx;</span><br><span class="line"><span class="keyword">wire</span> [<span class="number">7</span>:<span class="number">0</span>] po_data;</span><br><span class="line"><span class="keyword">wire</span> po_flag;</span><br><span class="line"></span><br><span class="line"><span class="keyword">initial</span> </span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    sys_clk = <span class="number">1&#x27;b1</span>;</span><br><span class="line">    sys_rst_n = <span class="number">1&#x27;b0</span>;</span><br><span class="line">    rx = <span class="number">1&#x27;b1</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    sys_rst_n = <span class="number">1&#x27;b1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//对编写的任务进行传参数调用</span></span><br><span class="line"><span class="keyword">initial</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    #<span class="number">200</span></span><br><span class="line">    rx_bit(<span class="number">8&#x27;d0</span>);         <span class="comment">//依次向data[7:0]传入0~7,每个数字都是一字节数据</span></span><br><span class="line">    rx_bit(<span class="number">8&#x27;d1</span>);</span><br><span class="line">    rx_bit(<span class="number">8&#x27;d2</span>);</span><br><span class="line">    rx_bit(<span class="number">8&#x27;d3</span>);</span><br><span class="line">    rx_bit(<span class="number">8&#x27;d4</span>); </span><br><span class="line">    rx_bit(<span class="number">8&#x27;d5</span>);</span><br><span class="line">    rx_bit(<span class="number">8&#x27;d6</span>);</span><br><span class="line">    rx_bit(<span class="number">8&#x27;d7</span>);</span><br><span class="line"><span class="keyword">end</span>    </span><br><span class="line"></span><br><span class="line"><span class="comment">//使用task模拟产生rx串行数据</span></span><br><span class="line"><span class="keyword">task</span> rx_bit</span><br><span class="line">(</span><br><span class="line">    <span class="keyword">input</span> [<span class="number">7</span>:<span class="number">0</span>] data</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">integer</span> i ;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i&lt;<span class="number">10</span> ;i = i + <span class="number">1</span> ) </span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">case</span>(i)</span><br><span class="line">        <span class="number">0</span> : rx &lt;= <span class="number">1&#x27;b0</span>;         <span class="comment">//模拟产生起始位0</span></span><br><span class="line">        <span class="number">1</span> : rx &lt;= data[<span class="number">0</span>];</span><br><span class="line">        <span class="number">2</span> : rx &lt;= data[<span class="number">1</span>];</span><br><span class="line">        <span class="number">3</span> : rx &lt;= data[<span class="number">2</span>];</span><br><span class="line">        <span class="number">4</span> : rx &lt;= data[<span class="number">3</span>];</span><br><span class="line">        <span class="number">5</span> : rx &lt;= data[<span class="number">4</span>];</span><br><span class="line">        <span class="number">6</span> : rx &lt;= data[<span class="number">5</span>];</span><br><span class="line">        <span class="number">7</span> : rx &lt;= data[<span class="number">6</span>];</span><br><span class="line">        <span class="number">8</span> : rx &lt;= data[<span class="number">7</span>];</span><br><span class="line">        <span class="number">9</span> : rx &lt;= <span class="number">1&#x27;b1</span>;         <span class="comment">//模拟产生停止位1</span></span><br><span class="line">        <span class="keyword">endcase</span></span><br><span class="line">        <span class="variable">#(5208*20)</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span>    </span><br><span class="line"><span class="keyword">endtask</span></span><br><span class="line"><span class="keyword">always</span> #<span class="number">10</span> sys_clk = ~sys_clk;</span><br><span class="line"><span class="comment">//对模块实例化</span></span><br><span class="line">uart_rx </span><br><span class="line">#(</span><br><span class="line">            <span class="variable">.UARTBPS</span>(<span class="number">9600</span>), </span><br><span class="line">            <span class="variable">.CLK_FREQ</span>(<span class="number">50_000_000</span>)</span><br><span class="line">)</span><br><span class="line">uart_rx_inst</span><br><span class="line">(</span><br><span class="line"> <span class="variable">.sys_clk</span>  (sys_clk), </span><br><span class="line"> <span class="variable">.sys_rst_n</span>(sys_rst_n),</span><br><span class="line"> <span class="variable">.rx</span>       (rx),</span><br><span class="line"></span><br><span class="line"> <span class="variable">.po_data</span>  (po_data),</span><br><span class="line"> <span class="variable">.po_flag</span>  (po_flag)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="PA8-uart-tx模块设计思路"><a href="#PA8-uart-tx模块设计思路" class="headerlink" title="PA8.uart_tx模块设计思路"></a>PA8.uart_tx模块设计思路</h2><ol>
+<li>现在绘制uart_tx模块波形图,详细解释每个信号的作用,如下图所示:<p>
+<img src="https://s21.ax1x.com/2024/07/29/pkLaCod.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/29/pkLaCod.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width=1200" height="220" align = "center">
+</p></li>
+</ol>
+<blockquote>
+<ul>
+<li>pi_data[7:0]和pi_flag通过连线uart_rx模块的po_data[7:0]和po_flag作为输入信号,表示接收到的并行数据和数据有效标志,pi_flag置1表示uart_tx开始工作,这时拉高word_en使能信号</li>
+<li>baud_cnt[15:0]和bit_cnt[3:0]与uart_rx模块的一样,用于计数和标志</li>
+<li>但bit_cnt[3:0]略有不同,因为发送一帧信号需要发送包括起始位,停止位,数据位共10bit数据所以bit_cnt计数范围为0~9<br>随着bit_cnt的取值,将pi_data[7:0]按串行数据的帧格式通过tx输出</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li><p>根据上述设计思路,编写RTL代码,如下:</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> uart_tx</span><br><span class="line">#(</span><br><span class="line">    <span class="keyword">parameter</span>  UART_BPS =<span class="number">&#x27;d9600</span> ,</span><br><span class="line">               CLK_FREQ = <span class="number">&#x27;d50_000_000</span></span><br><span class="line">)</span><br><span class="line">(</span><br><span class="line">    <span class="keyword">input</span> <span class="keyword">wire</span> sys_clk,</span><br><span class="line">    <span class="keyword">input</span> <span class="keyword">wire</span> sys_rst_n,</span><br><span class="line">    <span class="keyword">input</span> <span class="keyword">wire</span> [<span class="number">7</span>:<span class="number">0</span>] pi_data,</span><br><span class="line">    <span class="keyword">input</span> <span class="keyword">wire</span> pi_flag,</span><br><span class="line">    <span class="keyword">output</span> <span class="keyword">reg</span> tx</span><br><span class="line">);</span><br><span class="line"><span class="keyword">parameter</span> BAUD_CNT_MAX = CLK_FREQ/UART_BPS;</span><br><span class="line"><span class="keyword">reg</span> word_en;</span><br><span class="line"><span class="keyword">reg</span> [<span class="number">15</span>:<span class="number">0</span>] baud_cnt;</span><br><span class="line"><span class="keyword">reg</span> bit_flag;</span><br><span class="line"><span class="keyword">reg</span> [<span class="number">3</span>:<span class="number">0</span>] bit_cnt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//编写使能信号word_en</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    word_en &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(pi_flag == <span class="number">1&#x27;b1</span>)</span><br><span class="line">    word_en &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((bit_cnt == <span class="number">4&#x27;d9</span>)&amp;&amp;(bit_flag == <span class="number">1&#x27;b1</span>))</span><br><span class="line">    word_en &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line"><span class="keyword">end</span>    </span><br><span class="line"><span class="comment">//编写波特率计数器baud_cnt</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    baud_cnt &lt;= <span class="number">16&#x27;d0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((word_en == <span class="number">1&#x27;b0</span>)||(baud_cnt == BAUD_CNT_MAX -<span class="number">1&#x27;b1</span>))</span><br><span class="line">    baud_cnt &lt;= <span class="number">16&#x27;d0</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    baud_cnt &lt;= baud_cnt + <span class="number">16&#x27;d1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">//编写波特率计数标志bit_flag</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    bit_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(baud_cnt == <span class="number">16&#x27;d1</span>)</span><br><span class="line">    bit_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    bit_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">//编写bit_cnt</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    bit_cnt &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((bit_cnt == <span class="number">4&#x27;d9</span>)&amp;&amp;(bit_flag == <span class="number">1&#x27;b1</span>))</span><br><span class="line">    bit_cnt &lt;= <span class="number">4&#x27;d0</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>((word_en == <span class="number">1&#x27;b1</span>)&amp;&amp;(bit_flag == <span class="number">1&#x27;b1</span>))</span><br><span class="line">    bit_cnt &lt;= bit_cnt + <span class="number">4&#x27;d1</span>;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    bit_cnt &lt;= bit_cnt;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="comment">//编写输出tx</span></span><br><span class="line"><span class="keyword">always</span> @(<span class="keyword">posedge</span> sys_clk <span class="keyword">or</span> <span class="keyword">negedge</span> sys_rst_n)</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    <span class="keyword">if</span>(~sys_rst_n)</span><br><span class="line">    tx &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span>(bit_flag == <span class="number">1&#x27;b1</span>)</span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">case</span>(bit_cnt)</span><br><span class="line">        <span class="number">4&#x27;d0</span> : tx &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">        <span class="number">4&#x27;d1</span> : tx &lt;= pi_data[<span class="number">0</span>];</span><br><span class="line">        <span class="number">4&#x27;d2</span> : tx &lt;= pi_data[<span class="number">1</span>];</span><br><span class="line">        <span class="number">4&#x27;d3</span> : tx &lt;= pi_data[<span class="number">2</span>];</span><br><span class="line">        <span class="number">4&#x27;d4</span> : tx &lt;= pi_data[<span class="number">3</span>];</span><br><span class="line">        <span class="number">4&#x27;d5</span> : tx &lt;= pi_data[<span class="number">4</span>];</span><br><span class="line">        <span class="number">4&#x27;d6</span> : tx &lt;= pi_data[<span class="number">5</span>];</span><br><span class="line">        <span class="number">4&#x27;d7</span> : tx &lt;= pi_data[<span class="number">6</span>];</span><br><span class="line">        <span class="number">4&#x27;d8</span> : tx &lt;= pi_data[<span class="number">7</span>];</span><br><span class="line">        <span class="number">4&#x27;d9</span> : tx &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">        <span class="keyword">default</span> : tx &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    <span class="keyword">endcase</span></span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    tx &lt;= tx ;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>编写testbench测试文件</p>
+<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">`<span class="keyword">timescale</span> 1ns/1ps</span></span><br><span class="line"><span class="keyword">module</span> uart_rx_tb();</span><br><span class="line"><span class="keyword">reg</span> sys_clk;</span><br><span class="line"><span class="keyword">reg</span> sys_rst_n;</span><br><span class="line"><span class="keyword">reg</span> [<span class="number">7</span>:<span class="number">0</span>] pi_data;</span><br><span class="line"><span class="keyword">reg</span> pi_flag;</span><br><span class="line"><span class="keyword">wire</span> tx;</span><br><span class="line"></span><br><span class="line"><span class="keyword">initial</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    sys_clk = <span class="number">1&#x27;b1</span>;</span><br><span class="line">    sys_rst_n = <span class="number">1&#x27;b0</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    sys_rst_n = <span class="number">1&#x27;b1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">always</span> #<span class="number">10</span> sys_clk = ~sys_clk;</span><br><span class="line"><span class="comment">//编写pi_data和pi_flag</span></span><br><span class="line"><span class="keyword">initial</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    pi_data &lt;= <span class="number">8&#x27;d0</span>;</span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    #<span class="number">200</span></span><br><span class="line">    <span class="comment">//产生数据0</span></span><br><span class="line">    pi_data &lt;= <span class="number">8&#x27;d0</span>;</span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="variable">#(5208*10*20)</span></span><br><span class="line">    <span class="comment">//产生数据1</span></span><br><span class="line">    pi_data &lt;= <span class="number">8&#x27;d1</span>;</span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="variable">#(5208*10*20)</span></span><br><span class="line">    <span class="comment">//产生数据2</span></span><br><span class="line">    pi_data &lt;= <span class="number">8&#x27;d2</span>;</span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="variable">#(5208*10*20)</span></span><br><span class="line">    <span class="comment">//产生数据3</span></span><br><span class="line">    pi_data &lt;= <span class="number">8&#x27;d3</span>;</span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="variable">#(5208*10*20)</span></span><br><span class="line">    <span class="comment">//产生数据4</span></span><br><span class="line">    pi_data &lt;= <span class="number">8&#x27;d4</span>;</span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="variable">#(5208*10*20)</span></span><br><span class="line">    <span class="comment">//产生数据5</span></span><br><span class="line">    pi_data &lt;= <span class="number">8&#x27;d5</span>;</span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="variable">#(5208*10*20)</span></span><br><span class="line">    <span class="comment">//产生数据6</span></span><br><span class="line">    pi_data &lt;= <span class="number">8&#x27;d6</span>;</span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">    <span class="variable">#(5208*10*20)</span></span><br><span class="line">    <span class="comment">//产生数据7</span></span><br><span class="line">    pi_data &lt;= <span class="number">8&#x27;d7</span>;</span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    pi_flag &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line">uart_tx</span><br><span class="line">#(</span><br><span class="line">    <span class="variable">.UART_BPS</span>(<span class="number">9600</span>),</span><br><span class="line">    <span class="variable">.CLK_FREQ</span>(<span class="number">50000000</span>)</span><br><span class="line">)</span><br><span class="line">uart_tx_inst</span><br><span class="line">(</span><br><span class="line">    <span class="variable">.sys_clk</span>(sys_clk),</span><br><span class="line">    <span class="variable">.sys_rst_n</span>(sys_rst_n),</span><br><span class="line">    <span class="variable">.pi_data</span>(pi_data),</span><br><span class="line">    <span class="variable">.pi_flag</span>(pi_flag),</span><br><span class="line">    <span class="variable">.tx</span>(tx)</span><br><span class="line">);</span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="PA9-顶层文件的设计"><a href="#PA9-顶层文件的设计" class="headerlink" title="PA9.顶层文件的设计"></a>PA9.顶层文件的设计</h2><ol>
+<li>根据上述设计思路,编写顶层文件,如下:<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">module</span> top_uart(</span><br><span class="line">    <span class="keyword">input</span> <span class="keyword">wire</span> sys_clk,</span><br><span class="line">    <span class="keyword">input</span> <span class="keyword">wire</span> sys_rst_n,</span><br><span class="line">    <span class="keyword">input</span> <span class="keyword">wire</span> rx,</span><br><span class="line">    <span class="keyword">output</span> <span class="keyword">wire</span> tx</span><br><span class="line">);</span><br><span class="line"><span class="keyword">wire</span> [<span class="number">7</span>:<span class="number">0</span>] po_data;</span><br><span class="line"><span class="keyword">wire</span>       po_flag;</span><br><span class="line"></span><br><span class="line"><span class="comment">//实例化module_rx和module_tx两个子功能模块</span></span><br><span class="line">uart_rx </span><br><span class="line">#(</span><br><span class="line">    <span class="variable">.UARTBPS</span>(<span class="number">9600</span>), </span><br><span class="line">    <span class="variable">.CLK_FREQ</span>(<span class="number">50000000</span>)</span><br><span class="line">)</span><br><span class="line">uart_rx_inst</span><br><span class="line">(</span><br><span class="line"> <span class="variable">.sys_clk</span>  (sys_clk), </span><br><span class="line"> <span class="variable">.sys_rst_n</span>(sys_rst_n),</span><br><span class="line"> <span class="variable">.rx</span>       (rx),</span><br><span class="line"></span><br><span class="line"> <span class="variable">.po_data</span>  (po_data),</span><br><span class="line"> <span class="variable">.po_flag</span>  (po_flag)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line">uart_tx</span><br><span class="line">#(</span><br><span class="line">    <span class="variable">.UART_BPS</span>(<span class="number">9600</span>),</span><br><span class="line">    <span class="variable">.CLK_FREQ</span>(<span class="number">50000000</span>)</span><br><span class="line">)</span><br><span class="line">uart_tx_inst</span><br><span class="line">(</span><br><span class="line">    <span class="variable">.sys_clk</span>(sys_clk),</span><br><span class="line">    <span class="variable">.sys_rst_n</span>(sys_rst_n),</span><br><span class="line">    <span class="variable">.pi_data</span>(po_data),</span><br><span class="line">    <span class="variable">.pi_flag</span>(po_flag),</span><br><span class="line">    <span class="variable">.tx</span>(tx)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure></li>
+<li>编写顶层testbench测试文件<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">`<span class="keyword">timescale</span> 1ns/1ps</span></span><br><span class="line"><span class="keyword">module</span> top_uart_tb();</span><br><span class="line"></span><br><span class="line"><span class="keyword">reg</span> sys_clk;</span><br><span class="line"><span class="keyword">reg</span> sys_rst_n;</span><br><span class="line"><span class="keyword">reg</span> rx;</span><br><span class="line"><span class="keyword">wire</span> tx;</span><br><span class="line"></span><br><span class="line"><span class="keyword">initial</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    sys_clk = <span class="number">1&#x27;b1</span>;</span><br><span class="line">    sys_rst_n = <span class="number">1&#x27;b0</span>;</span><br><span class="line">    rx = <span class="number">1&#x27;b1</span>;</span><br><span class="line">    #<span class="number">20</span></span><br><span class="line">    sys_rst_n = <span class="number">1&#x27;b1</span>;</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">always</span> #<span class="number">10</span> sys_clk = ~sys_clk;</span><br><span class="line"></span><br><span class="line"><span class="keyword">initial</span></span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line">    #<span class="number">200</span></span><br><span class="line">    rx_byte();</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用task模拟产生rx串行数据,与uart_rx_tb中模拟产生串行数据的方式略有不同,但本质均是产生串行数据</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">task</span> rx_byte();</span><br><span class="line"><span class="keyword">integer</span> j;</span><br><span class="line"><span class="keyword">for</span> (j =<span class="number">0</span> ;j&lt;<span class="number">8</span> ;j =j+<span class="number">1</span> ) <span class="keyword">begin</span></span><br><span class="line">    rx_bit(j);</span><br><span class="line"><span class="keyword">end</span></span><br><span class="line"><span class="keyword">endtask</span>    </span><br><span class="line"></span><br><span class="line"><span class="keyword">task</span> rx_bit</span><br><span class="line">(</span><br><span class="line">    <span class="keyword">input</span> [<span class="number">7</span>:<span class="number">0</span>] data</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">integer</span> i ;</span><br><span class="line"><span class="keyword">begin</span></span><br><span class="line"><span class="keyword">for</span> (i = <span class="number">0</span>; i&lt;<span class="number">10</span> ;i = i + <span class="number">1</span> ) </span><br><span class="line">    <span class="keyword">begin</span></span><br><span class="line">        <span class="keyword">case</span>(i)</span><br><span class="line">        <span class="number">0</span> : rx &lt;= <span class="number">1&#x27;b0</span>;</span><br><span class="line">        <span class="number">1</span> : rx &lt;= data[<span class="number">0</span>];</span><br><span class="line">        <span class="number">2</span> : rx &lt;= data[<span class="number">1</span>];</span><br><span class="line">        <span class="number">3</span> : rx &lt;= data[<span class="number">2</span>];</span><br><span class="line">        <span class="number">4</span> : rx &lt;= data[<span class="number">3</span>];</span><br><span class="line">        <span class="number">5</span> : rx &lt;= data[<span class="number">4</span>];</span><br><span class="line">        <span class="number">6</span> : rx &lt;= data[<span class="number">5</span>];</span><br><span class="line">        <span class="number">7</span> : rx &lt;= data[<span class="number">6</span>];</span><br><span class="line">        <span class="number">8</span> : rx &lt;= data[<span class="number">7</span>];</span><br><span class="line">        <span class="number">9</span> : rx &lt;= <span class="number">1&#x27;b1</span>;</span><br><span class="line">        <span class="keyword">endcase</span></span><br><span class="line">        <span class="variable">#(5208*20)</span>;</span><br><span class="line">    <span class="keyword">end</span></span><br><span class="line"><span class="keyword">end</span>    </span><br><span class="line"><span class="keyword">endtask</span></span><br><span class="line"></span><br><span class="line">top_uart top_uart_inst</span><br><span class="line">(</span><br><span class="line">    <span class="variable">.sys_clk</span>  (sys_clk),</span><br><span class="line">    <span class="variable">.sys_rst_n</span>(sys_rst_n),</span><br><span class="line">    <span class="variable">.rx</span>       (rx),</span><br><span class="line">    <span class="variable">.tx</span>       (tx)</span><br><span class="line">);</span><br><span class="line"></span><br><span class="line"><span class="keyword">endmodule</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="PA10-仿真与实验效果"><a href="#PA10-仿真与实验效果" class="headerlink" title="PA10.仿真与实验效果"></a>PA10.仿真与实验效果</h2><p>产生波形图后,请自行对照仿真结果,看看是否符合预期,接下来上板验证,再用串口调试助手发送数据,看看是否能够回环通信,用数据线连接USB转串口</p>
+<p>
+<img src="https://s21.ax1x.com/2024/07/30/pkOP7FI.jpg" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/30/pkOP7FI.jpg" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width=280" height="220" align = "center">
+</p>
+用串口调试助手发送数据的展示效果如下:发送与接收的数据一样,实现了电脑与FPGA的回环通信
+<p>
+<img src="https://s21.ax1x.com/2024/07/30/pkOCT2T.png" class="lazyload" data-srcset="https://s21.ax1x.com/2024/07/30/pkOCT2T.png" srcset="data:image/gif;base64,R0lGODlhAQABAIAAAP///////yH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt="" width=800" height="350" align = "center">
+</p>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><code>完结撒花🎉🎉🎉</code></p>
 
   </div>
   
-  
-    
-    <div class='footer'>
-       <!-- 参考资料、相关资料等 -->
-      
-       <!-- 相关文章 -->
-      
-      <!-- 版权声明组件 -->
-      
-      <!-- 打赏组件 -->
-      
-    </div>
   
   
     
@@ -2993,10 +3147,10 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
     <div class='new-meta-box'>
       
         
-          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-07-29T21:57:15+08:00">
+          <div class="new-meta-item date" itemprop="dateModified" datetime="2024-09-11T13:11:35+08:00">
   <a class='notlink'>
     <i class="fa-solid fa-edit fa-fw" aria-hidden="true"></i>
-    <p>更新于：2024年7月29日</p>
+    <p>更新于：2024年9月11日</p>
   </a>
 </div>
 
@@ -3015,7 +3169,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qq" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/2024/06/26/hello-world/&title=first blog - GXM的梦工厂&summary="
+          target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://example.com/fpga-posts/index.html&title=FPGA学习日记(一)--UART_RS232 - GXM的梦工厂&summary="
           
           >
           
@@ -3027,7 +3181,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-qzone" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/2024/06/26/hello-world/&title=first blog - GXM的梦工厂&summary="
+          target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://example.com/fpga-posts/index.html&title=FPGA学习日记(一)--UART_RS232 - GXM的梦工厂&summary="
           
           >
           
@@ -3039,7 +3193,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
       
         <a class="-mob-share-weibo" title="" rel="external nofollow noopener noreferrer noopener"
           
-          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/2024/06/26/hello-world/&title=first blog - GXM的梦工厂&summary="
+          target="_blank" href="http://service.weibo.com/share/share.php?url=http://example.com/fpga-posts/index.html&title=FPGA学习日记(一)--UART_RS232 - GXM的梦工厂&summary="
           
           >
           
@@ -3070,17 +3224,6 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
   
 
   
-    <div class="prev-next">
-      
-        <a class='prev' href='/2024/07/21/FPGA%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0(%E4%B8%80)--UART_RS232/'>
-          <p class='title'><i class="fa-solid fa-chevron-left" aria-hidden="true"></i>FPGA学习日记(一)--UART_RS232</p>
-          <p class='content'>基于FPGA平台实现的UART_RS232通信实验
-声明:本文仅作为自己的学习记录,分享自己的小小心得,所引用的资料大多都能在网上搜索到,希望与志同道合的伙伴一起学习!可以在文章的下方评论交流!...</p>
-        </a>
-      
-      
-    </div>
-  
   <!-- Custom Files postEnd begin-->
   
   <!-- Custom Files postEnd end-->
@@ -3092,7 +3235,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
   <article class="post white-box shadow floatable blur" id="comments">
     <span hidden>
-      <meta itemprop="discussionUrl" content="/2024/06/26/hello-world/index.html#comments">
+      <meta itemprop="discussionUrl" content="/fpga-posts/index.html#comments">
     </span>
     <p ct><i class='fa-solid fa-comments'></i> 评论</p>
     
@@ -3134,7 +3277,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 
 
     <div class='content'>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#PA0-%E5%AE%8C%E6%88%90%E6%9C%AC%E6%AC%A1%E5%AE%9E%E9%AA%8C%E6%89%80%E9%9C%80%E8%A6%81%E7%9A%84%E8%83%BD%E5%8A%9B"><span class="toc-number">1.</span> <span class="toc-text">PA0.完成本次实验所需要的能力</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PA1-%E5%AE%9E%E9%AA%8C%E5%89%8D%E7%A2%8E%E7%A2%8E%E5%BF%B5"><span class="toc-number">2.</span> <span class="toc-text">PA1.实验前碎碎念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PA2-%E8%83%8C%E6%99%AF%E5%BC%95%E5%85%A5-%E5%BA%9F%E8%AF%9D%E5%BE%88%E5%A4%9A-%E5%BF%8D%E4%B8%80%E4%B8%8B%F0%9F%91%89%F0%9F%91%88"><span class="toc-number">3.</span> <span class="toc-text">PA2.背景引入(废话很多,忍一下👉👈)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PA3-%E4%B8%B2%E8%A1%8C%E9%80%9A%E4%BF%A1%E7%9A%84%E5%88%86%E7%B1%BB"><span class="toc-number">4.</span> <span class="toc-text">PA3.串行通信的分类</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PA4-UART%E2%80%93RS232%E7%9A%84%E4%BB%8B%E7%BB%8D"><span class="toc-number">5.</span> <span class="toc-text">PA4.UART–RS232的介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PA5-%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84"><span class="toc-number">6.</span> <span class="toc-text">PA5.实验目的</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PA6-%E5%AE%9E%E9%AA%8C%E6%95%B4%E4%BD%93%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="toc-number">7.</span> <span class="toc-text">PA6.实验整体设计思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PA7-uart-rx%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="toc-number">8.</span> <span class="toc-text">PA7.uart_rx模块设计思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PA8-uart-tx%E6%A8%A1%E5%9D%97%E8%AE%BE%E8%AE%A1%E6%80%9D%E8%B7%AF"><span class="toc-number">9.</span> <span class="toc-text">PA8.uart_tx模块设计思路</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PA9-%E9%A1%B6%E5%B1%82%E6%96%87%E4%BB%B6%E7%9A%84%E8%AE%BE%E8%AE%A1"><span class="toc-number">10.</span> <span class="toc-text">PA9.顶层文件的设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#PA10-%E4%BB%BF%E7%9C%9F%E4%B8%8E%E5%AE%9E%E9%AA%8C%E6%95%88%E6%9E%9C"><span class="toc-number">11.</span> <span class="toc-text">PA10.仿真与实验效果</span></a></li></ol>
     </div>
   </section>
 
@@ -3190,7 +3333,7 @@ if (/*@cc_on!@*/false || (!!window.MSInputMethodContext && !!document.documentMo
 <pjax>
 <script>
   window.pdata={}
-  pdata.ispage=true;
+  pdata.ispage=false;
   pdata.commentPath="";
   pdata.commentPlaceholder="";
   pdata.commentConfig={};
@@ -3834,7 +3977,7 @@ window.matchMedia('(prefers-color-scheme: light)').addListener(darkModelListener
 </script>
 
 
-  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"GXM的梦工厂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"GUOXIANGMING","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"nihao"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"GXM的梦工厂"}},{"@type":"ListItem","position":3,"item":{"@id":"http://example.com/2024/06/26/hello-world/","name":"first blog"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"GXM的梦工厂","url":"http://example.com/","keywords":null,"description":"nihao","author":{"@type":"Person","name":"GUOXIANGMING","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"nihao"},"publisher":{"@type":"Organization","name":"GXM的梦工厂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"first blog","description":"nihao","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/2024/06/26/hello-world/"},"author":{"@type":"Person","name":"GUOXIANGMING","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"GXM的梦工厂","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/2024/06/26/hello-world/","wordCount":0,"datePublished":"2024-06-26T15:21:11.808Z","dateModified":"2024-07-29T13:57:15.776Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
+  <script type="application/ld+json">[{"@context":"http://schema.org","@type":"Organization","name":"GXM的梦工厂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},{"@context":"http://schema.org","@type":"Person","name":"GUOXIANGMING","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","sameAs":["https://github.com/volantis-x"],"description":"nihao"},{"@context":"http://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"item":{"@id":"http://example.com/","name":"GXM的梦工厂"}}]},{"@context":"http://schema.org","@type":"WebSite","name":"GXM的梦工厂","url":"http://example.com/","keywords":null,"description":"nihao","author":{"@type":"Person","name":"GUOXIANGMING","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/","description":"nihao"},"publisher":{"@type":"Organization","name":"GXM的梦工厂","url":"http://example.com/","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"potentialAction":{"@type":"SearchAction","name":"Site Search","target":{"@type":"EntryPoint","urlTemplate":"http://example.com?s={search_term_string}"},"query-input":"required name=search_term_string"}},{"@context":"http://schema.org","@type":"BlogPosting","headline":"FPGA学习日记(一)--UART_RS232","description":"nihao","inLanguage":"zh-CN","mainEntityOfPage":{"@type":"WebPage","@id":"http://example.com/fpga-posts/index.html"},"author":{"@type":"Person","name":"GUOXIANGMING","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png"},"url":"http://example.com/"},"publisher":{"@type":"Organization","name":"GXM的梦工厂","logo":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}},"url":"http://example.com/fpga-posts/index.html","wordCount":0,"datePublished":"2024-09-11T05:07:04.000Z","dateModified":"2024-09-11T05:11:35.280Z","image":{"@type":"ImageObject","url":"https://unpkg.com/volantis-static@0.0.1654736714924/media/org.volantis/blog/favicon/android-chrome-192x192.png","width":192,"height":192}}]</script>
 
 
 
