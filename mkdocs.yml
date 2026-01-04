@@ -1,5 +1,5 @@
 site_name: GXM BLOG
-
+site_author: GUOXM
 theme: 
   name: material
   palette:
@@ -23,9 +23,10 @@ theme:
     - navigation.sections
   language: zh
 
+
+# 页面配置
 nav:
-  - 个人主页:
-    - 欢迎参观我的博客: 个人主页/index.md 
+  - 个人主页: 个人主页/个人主页.md 
   - 数字IC学习: 
     - 基础总线学习: 数字IC学习/基础总线学习/基础总线学习.md
     - CPU设计学习: 数字IC学习/CPU设计学习/cpu.md
