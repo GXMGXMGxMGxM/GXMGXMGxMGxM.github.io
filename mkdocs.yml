@@ -1,16 +1,14 @@
 site_name: GXM BLOG
-site_url: https://gxm.github.io
+
 theme: 
   name: material
   palette:
-    # 白天模式
     - scheme: default
       primary: teal
       accent: indigo
       toggle:
         icon: material/weather-sunny
         name: Switch to light mode
-    # 黑夜模式
     - scheme: slate
       primary: grey
       accent: blue
@@ -26,5 +24,8 @@ theme:
   language: zh
 
 nav:
-  - 你好: 你好.md
-  - About: index.md
+  - 个人主页:
+    - 欢迎参观我的博客: 个人主页/index.md 
+  - 数字IC学习: 
+    - 基础总线学习: 数字IC学习/基础总线学习/基础总线学习.md
+    - CPU设计学习: 数字IC学习/CPU设计学习/cpu.md
