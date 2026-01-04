@@ -19,9 +19,12 @@ theme:
         name: Switch to dark mode
   icon: 
     logo: material/github
-
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
   language: zh
 
-
-repo_url: https://gxmgxmgxmgxm.github.io/ic_note/
-repo_name: 数字ic学习笔记
+nav:
+  - 你好: 你好.md
+  - About: index.md
