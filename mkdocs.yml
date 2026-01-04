@@ -1,5 +1,5 @@
 site_name: GXM BLOG
-
+site_url: https://gxm.github.io
 theme: 
   name: material
   palette:
